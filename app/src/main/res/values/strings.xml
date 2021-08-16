@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Omah</string>
+    <string name="next">Selanjutnya</string>
+    <string name="start">Mulai</string>
+    <string name="onboarding_1">Smart Home</string>
+    <string name="onBoardingDesc_1">Bangun otomatisasi pada rumah terbaik dengan Smart Home</string>
+    <string name="onboarding_2">Enjoy</string>
+    <string name="onBoardingDesc_2">Tidak perlu khawatir</string>
+    <string name="onboarding_3">Mudah dalam mengontrol</string>
+    <string name="onBoardingDesc_3">Kemudahan dalam 7mengontrol perangkat hanya dengan smartphone </string>
+    <string name="hello">Hallo,</string>
+    <string name="tagline">Control as you want</string>
+    <string name="perangkat">Perangkat</string>
+    <string name="back">Kembali</string>
+    <string name="off">OFF</string>
+    <string name="voice">Kontrol dengan suara</string>
+    <string name="lamp">Lampu</string>
+    <string name="television">Televisi</string>
+    <string name="fan">Kipas</string>
+    <string name="pump">Pompa</string>
+    <string name="fence">Pagar</string>
+    <string name="temperature">%s °C</string>
+    <string name="humidity">%s RH</string>
+</resources>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cc_weather"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_greeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="@string/hello"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/weather_info_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/poppins"
+                android:text="@string/tagline"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_greeting"
+                app:layout_constraintTop_toBottomOf="@+id/tv_greeting" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/weather_info_label">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_temp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/poppins"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:drawableTopCompat="@drawable/ic_temperature"
+                        tools:text="@string/temperature" />
+
+                    <TextView
+                        android:id="@+id/tv_humidity"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/poppins"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:drawableTopCompat="@drawable/ic_humadity"
+                        tools:text="@string/humidity" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/label_voice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:text="@string/voice"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cc_weather" />
+
+        <TextView
+            android:id="@+id/result_voice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:text="@string/voice"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/label_voice"
+            app:layout_constraintStart_toStartOf="@id/label_voice"
+            app:layout_constraintTop_toBottomOf="@+id/label_voice" />
+
+        <ImageView
+            android:id="@+id/bg_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/bg_home_circle"
+            android:contentDescription="@string/voice"
+            app:layout_constraintEnd_toEndOf="@id/result_voice"
+            app:layout_constraintStart_toStartOf="@id/result_voice"
+            app:layout_constraintTop_toBottomOf="@id/result_voice" />
+
+        <ImageView
+            android:id="@+id/btn_voice"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:contentDescription="@string/voice"
+            android:src="@drawable/ic_voice"
+            app:layout_constraintBottom_toBottomOf="@id/bg_voice"
+            app:layout_constraintEnd_toEndOf="@id/bg_voice"
+            app:layout_constraintStart_toStartOf="@id/bg_voice"
+            app:layout_constraintTop_toTopOf="@id/bg_voice" />
+
+        <View
+            android:layout_width="180dp"
+            android:layout_height="2dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/dark_grey"
+            app:layout_constraintEnd_toEndOf="@id/tv_device"
+            app:layout_constraintStart_toStartOf="@id/tv_device"
+            app:layout_constraintTop_toBottomOf="@id/tv_device" />
+
+        <TextView
+            android:id="@+id/tv_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/perangkat"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/bg_voice"
+            app:layout_constraintStart_toStartOf="@+id/bg_voice"
+            app:layout_constraintTop_toBottomOf="@+id/bg_voice" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_perangkat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:nestedScrollingEnabled="false"
+            android:paddingBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_device"
+            tools:listitem="@layout/item_device" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
